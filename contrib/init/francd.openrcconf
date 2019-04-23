@@ -1,0 +1,33 @@
+# /etc/conf.d/francd: config file for /etc/init.d/francd
+
+# Config file location
+#FRANCD_CONFIGFILE="/etc/franc/franc.conf"
+
+# What directory to write pidfile to?  (created and owned by $FRANCD_USER)
+#FRANCD_PIDDIR="/var/run/francd"
+
+# What filename to give the pidfile
+#FRANCD_PIDFILE="${FRANCD_PIDDIR}/francd.pid"
+
+# Where to write francd data (be mindful that the blockchain is large)
+#FRANCD_DATADIR="/var/lib/francd"
+
+# User and group to own francd process
+#FRANCD_USER="franc"
+#FRANCD_GROUP="franc"
+
+# Path to francd executable
+#FRANCD_BIN="/usr/bin/francd"
+
+# Nice value to run francd under
+#FRANCD_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+#FRANCD_OPTS=""
+
+# The timeout in seconds OpenRC will wait for francd to terminate
+# after a SIGTERM has been raised.
+# Note that this will be mapped as argument to start-stop-daemon's
+# '--retry' option, which means you can specify a retry schedule
+# here. For more information see man 8 start-stop-daemon.
+FRANCD_SIGTERM_TIMEOUT=60
